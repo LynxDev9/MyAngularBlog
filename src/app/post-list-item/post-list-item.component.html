@@ -1,0 +1,8 @@
+<li [ngClass]="{'list-group-item':true,'list-group-item-success':posteLove > 0, 'list-group-item-danger':posteLove < 0}">
+  <h4 class="pull-right text-muted">{{posteDate|date: 'short'}}</h4>
+  <h2>{{ posteTitle }} ({{posteLove}})</h2>
+  <p>{{posteContent}}</p>
+
+    <button class="btn btn-sm btn-success"  (click)="onLove()" >Love it!</button>
+    <button class="btn btn-sm btn-danger"  (click)="onHate()" >Don't love it!</button>
+</li>
